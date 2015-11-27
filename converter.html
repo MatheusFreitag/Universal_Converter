@@ -10,15 +10,23 @@
           $(document).ready(function(){
             $(".temperature_form").hide();
             $(".length_form").hide();
-              $("#show_length").click(function(){
-                $(".temperature_form").toggle(false);
-                $(".length_form").slideToggle();
-
-              });
-              $("#show_temperature").click(function(){
+            $(".speed_form").hide();
+            $("#show_length").click(function(){
+              $(".speed_form").toggle(false);
+              $(".temperature_form").toggle(false);
+              $(".length_form").slideToggle();
+            });
+            $("#show_temperature").click(function(){
               $(".length_form").toggle(false);
+              $(".speed_form").toggle(false);
               $(".temperature_form").slideToggle();
-              });
+            });
+            $("#show_speed").click(function(){
+              $(".length_form").toggle(false);
+              $(".temperature_form").toggle(false);
+              $(".speed_form").slideToggle();
+            });
+
           });
      </script>
 
@@ -26,12 +34,13 @@
    </head>
    <body>
       <div id="header">
-        <h1>Length Converter</h1>
+        <h1>Universal Converter</h1>
         <br><br>
         <h4>An incredible converter for the everyday user</h4>
         <br>
         <button type="button" class="btn btn-default" id="show_length">Length</button>
         <button type="button" class="btn btn-default" id="show_temperature">Temperature</button>
+        <button type="button" class="btn btn-default" id="show_speed">Speed</button>
       </div>
 
 <!-- Temperature Form-->
@@ -88,6 +97,59 @@
 </table>
 </form>
 
+<!--Speed form-->
+<form id="form" class="speed_form">
+  <table>
+     <tr>
+         <td>From</td>
+    </tr>
+    <tr>
+         <td>
+            <select id= "from_index_speed" class="form-control">
+            <option> Kilometers per Hour
+            <option> Miles per Hour
+            </select>
+            <br>
+        </td>
+    </tr>
+    <tr>
+        <td>To</td>
+    </tr>
+    <tr>
+          <td>
+            <select id= "to_index_speed" class="form-control">
+              <option> Kilometers per Hour
+              <option> Miles per Hour
+            </select>
+            <br>
+          </td>
+    </tr>
+    <tr>
+      <td>Enter</td>
+    </tr>
+    <tr>
+      <td>
+        <input type="text"  class="form-control" id="user_input_speed" value="1">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <br>
+        <p>Result:</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p id="result_speed"></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <button type="button" class="btn btn-default" onclick="convert_speed()">Convert</button>
+      </td>
+    </tr>
+</table>
+</form>
 
 <!--Length Form-->
 

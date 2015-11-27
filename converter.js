@@ -26,11 +26,39 @@ function convert_temperature(){
 
     }
   }
-}  
+}
+
+function convert_speed(){
+	var from_index = document.getElementById("from_index_speed").selectedIndex;
+	var to_index = document.getElementById("to_index_speed").selectedIndex;
+  var conversion_result = document.getElementById("user_input_speed").value;
+
+  if (from_index == 0){
+    switch(to_index) {
+      case 0:
+          document.getElementById("result_speed").innerHTML = conversion_result;
+          break;
+      case 1:
+          conversion_result = conversion_result * 0.62
+          document.getElementById("result_speed").innerHTML = conversion_result;
+          break;
+    }
+  }
+  else if (from_index == 1){
+    switch(to_index) {
+      case 0:
+          conversion_result = conversion_result * 1.6
+          document.getElementById("result_speed").innerHTML = conversion_result;
+          break;
+      case 1:
+          document.getElementById("result_speed").innerHTML = conversion_result;
+          break;
+    }
+  }
+}
 
 
-function convert_length()
-{
+function convert_length(){
   var factors1 = new Array(1, 0.01, 0.00001, 0.00000621, 0.3937, 0.0328, 0.01094);
   var factors2 = new Array(100, 1, 0.001, 0.000621, 39.37, 3.28,  1.094);
   var factors3 = new Array(100000, 1000, 1, 0.621, 39370, 3280, 1094);
