@@ -9,13 +9,15 @@
       <script>
           $(document).ready(function(){
             $(".temperature_form").hide();
+            $(".length_form").hide();
               $("#show_length").click(function(){
-                  $(".length_form").show();
-                  $(".temperature_form").hide();
+                $(".temperature_form").toggle(false);
+                $(".length_form").slideToggle();
+
               });
               $("#show_temperature").click(function(){
-                  $(".temperature_form").show();
-                  $(".length_form").hide();
+              $(".length_form").toggle(false);
+              $(".temperature_form").slideToggle();
               });
           });
      </script>
