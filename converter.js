@@ -11,14 +11,14 @@ function convert_length()
   var factors7 = new Array(91.44, 0.9144, 0.0009144, 0.0005688, 36, 3, 1);
   var factors = new Array(factors1,factors2,factors3,factors4,factors5,factors6,factors7);
 
-	from_index = document.getElementById("from_index").selectedIndex;
-	to_index = document.getElementById("to_index").selectedIndex;
+	from_index = document.getElementById("from_index_length").selectedIndex;
+	to_index = document.getElementById("to_index_length").selectedIndex;
 	factor = factors[from_index][to_index];
-  var conversion_result = factor * document.getElementById("user_input").value;
-	if(isNaN(document.getElementById("user_input").value))
-		document.getElementById("Result").innerHTML = "Not a valid number.";
+  var conversion_result = factor * document.getElementById("user_input_length").value;
+	if(isNaN(document.getElementById("user_input_length").value))
+		document.getElementById("result_length").innerHTML = "Not a valid number.";
 	else
-		document.getElementById("Result").innerHTML = conversion_result;
+		document.getElementById("result_length").innerHTML = conversion_result;
 }
 
 $(document).ready(function(){
