@@ -1,0 +1,79 @@
+<html>
+   <body>
+      <script src="converter.js"></script>
+      <link href="bootstrap.css" rel="stylesheet">
+      <title>Converter</title>
+   </head>
+   <body>
+      <div id="header">
+        <h1>Length Converter</h1>
+        <br><br>
+        <h4>A full implemented conversor for the everyday user</h4>
+      </div>
+
+      <form id="form" class="length_form">
+        <table>
+  	       <tr>
+  		         <td>From</td>
+          </tr>
+          <tr>
+  		         <td>
+            			<select id= "from_index" class="form-control">
+            			<option> centimeters
+            			<option> meters
+            			<option> kilometers
+            			<option> miles
+            			<option> inches
+            			<option> feet
+            			<option> yards
+            			</select>
+                  <br>
+  		        </td>
+          </tr>
+          <tr>
+  		        <td>To</td>
+          </tr>
+          <tr>
+            		<td>
+            			<select id= "to_index" class="form-control">
+            			<option> centimeters
+            			<option> meters
+            			<option> kilometers
+            			<option> miles
+            			<option> inches
+            			<option> feet
+            			<option> yards
+            			</select>
+                  <br>
+            		</td>
+  	      </tr>
+        	<tr>
+        		<td>Enter</td>
+          </tr>
+          <tr>
+        		<td>
+              <input type="text"  class="form-control" id="user_input" value="1">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <br>
+              <p>Result:</p>
+            </td>
+          </tr>
+          <tr>
+        		<td>
+              <p id="Result"></p>
+            </td>
+        	</tr>
+          <tr>
+            <td>
+              <button type="button" class="btn btn-default" onclick="convert_unit()">Convert</button>
+            </td>
+          </tr>
+      </table>
+    </form>
+
+
+   </body>
+</head>
