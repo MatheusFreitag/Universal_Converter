@@ -2,15 +2,40 @@
    <body>
       <script src="converter.js"></script>
       <link href="bootstrap.css" rel="stylesheet">
+      <script src="jquery-2.1.4.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
       <title>Converter</title>
+
+      <script>
+          $(document).ready(function(){
+            $(".temperature_form").hide();
+              $("#show_length").click(function(){
+                  $(".length_form").show();
+                  $(".temperature_form").hide();
+              });
+              $("#show_temperature").click(function(){
+                  $(".temperature_form").show();
+                  $(".length_form").hide();
+              });
+          });
+     </script>
+
+
    </head>
    <body>
       <div id="header">
         <h1>Length Converter</h1>
         <br><br>
         <h4>A full implemented conversor for the everyday user</h4>
+        <br>
+        <button type="button" class="btn btn-default" id="show_length">Length</button>
+        <button type="button" class="btn btn-default" id="show_temperature">Temperature</button>
       </div>
 
+
+      <div class="temperature_form">
+        <p>Temperature</p>
+      </div>
       <form id="form" class="length_form">
         <table>
   	       <tr>
