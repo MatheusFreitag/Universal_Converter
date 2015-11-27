@@ -1,3 +1,32 @@
+function convert_temperature(){
+	var from_index = document.getElementById("from_index_temperature").selectedIndex;
+	var to_index = document.getElementById("to_index_temperature").selectedIndex;
+  var conversion_result = document.getElementById("user_input_temperature").value;
+
+  if (from_index == 0){
+    switch(to_index) {
+    case 0:
+        document.getElementById("result_temperature").innerHTML = conversion_result;
+        break;
+    case 1:
+        conversion_result = (conversion_result * 1.8) + 32
+        document.getElementById("result_temperature").innerHTML = conversion_result;
+        break;
+  }
+    }
+  else if (from_index == 1){
+    switch(to_index) {
+    case 0:
+        conversion_result = (conversion_result -32) / 1.8
+        document.getElementById("result_temperature").innerHTML = conversion_result;
+        break;
+    case 1:
+        document.getElementById("result_temperature").innerHTML = conversion_result;
+        break;
+
+    }
+  }
+}  
 
 
 function convert_length()
@@ -11,21 +40,12 @@ function convert_length()
   var factors7 = new Array(91.44, 0.9144, 0.0009144, 0.0005688, 36, 3, 1);
   var factors = new Array(factors1,factors2,factors3,factors4,factors5,factors6,factors7);
 
-	from_index = document.getElementById("from_index").selectedIndex;
-	to_index = document.getElementById("to_index").selectedIndex;
-	factor = factors[from_index][to_index];
-  var conversion_result = factor * document.getElementById("user_input").value;
-	if(isNaN(document.getElementById("user_input").value))
-		document.getElementById("Result").innerHTML = "Not a valid number.";
+	var from_index = document.getElementById("from_index_length").selectedIndex;
+	var to_index = document.getElementById("to_index_length").selectedIndex;
+	var factor = factors[from_index][to_index];
+  var conversion_result = factor * document.getElementById("user_input_length").value;
+	if(isNaN(document.getElementById("user_input_length").value))
+		document.getElementById("result_length").innerHTML = "Not a valid number.";
 	else
-		document.getElementById("Result").innerHTML = conversion_result;
+		document.getElementById("result_length").innerHTML = conversion_result;
 }
-
-$(document).ready(function(){
-    $("#hide").click(function(){
-        $("form").hide();
-    });
-    $("#show").click(function(){
-        $("form").show();
-    });
-});
