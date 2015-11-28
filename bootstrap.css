@@ -5,40 +5,60 @@
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
-  font-family: sans-serif;
-  -webkit-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
+  font-family               : sans-serif;
+  -webkit-text-size-adjust  : 100%;
+  -ms-text-size-adjust      : 100%;
 }
 body {
-  margin: 0;
+  margin            : 0;
 }
 
 #header{
-  text-align: center;
-  padding: 50px;
-  background-color: #293e6a;
-  color: #ffffff;
+  text-align        : center;
+  padding           : 50px;
+  background-color  : #293e6a;
+  color             : #ffffff;
 }
 
 #form{
-  padding-left: 43%;
-  padding-right: 25%;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  background-color: #3b5998;
+  padding-left      : 43%;
+  padding-right     : 25%;
+  padding-top       : 30px;
+  padding-bottom    : 30px;
+  background-color  : #3b5998;
 }
 
 table{
-  color: #fff;
+  color             : #fff;
 }
 
 
 
 td{
-  font-size: 20px;
-  text-align: center;
+  font-size         : 20px;
+  text-align        : center;
 }
 
+#details_of_speed{
+  display           : none;
+  text-align        : center;
+  font-size         : 20px;
+  color             : #fff;
+}
+
+#details_of_length{
+  display           : none;
+  text-align        : center;
+  font-size         : 20px;
+  color             : #fff;
+}
+
+#details_of_weight{
+  display           : none;
+  text-align        : center;
+  font-size         : 20px;
+  color             : #fff;
+}
 
 
 
