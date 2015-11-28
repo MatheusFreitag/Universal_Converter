@@ -5,31 +5,44 @@
       <script src="jquery-2.1.4.min.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
       <title>Converter</title>
-
       <script>
           $(document).ready(function(){
             $(".temperature_form").hide();
             $(".length_form").hide();
             $(".speed_form").hide();
+            $(".weight_form").hide();
             $("#show_length").click(function(){
               $(".speed_form").toggle(false);
               $(".temperature_form").toggle(false);
+              $(".weight_form").toggle(false);
               $(".length_form").slideToggle();
+              hide_all_details();
             });
             $("#show_temperature").click(function(){
               $(".length_form").toggle(false);
               $(".speed_form").toggle(false);
+              $(".weight_form").toggle(false);
               $(".temperature_form").slideToggle();
+              hide_all_details();
             });
             $("#show_speed").click(function(){
               $(".length_form").toggle(false);
               $(".temperature_form").toggle(false);
+              $(".weight_form").toggle(false);
               $(".speed_form").slideToggle();
+              hide_all_details();
+            });
+            $("#show_weight").click(function(){
+              $(".length_form").toggle(false);
+              $(".temperature_form").toggle(false);
+              $(".speed_form").toggle(false);
+              $(".weight_form").slideToggle();
+              hide_all_details();
             });
 
           });
-     </script>
 
+      </script>
 
    </head>
    <body>
@@ -41,6 +54,7 @@
         <button type="button" class="btn btn-default" id="show_length">Length</button>
         <button type="button" class="btn btn-default" id="show_temperature">Temperature</button>
         <button type="button" class="btn btn-default" id="show_speed">Speed</button>
+        <button type="button" class="btn btn-default" id="show_weight">Weight</button>
       </div>
 
 <!-- Temperature Form-->
@@ -96,6 +110,62 @@
     </tr>
 </table>
 </form>
+
+
+<!-- weight Form-->
+<form id="form" class="weight_form">
+  <table>
+     <tr>
+         <td>From</td>
+    </tr>
+    <tr>
+         <td>
+            <select id= "from_index_weight" class="form-control">
+            <option> Kilograms
+            <option> Pounds
+            </select>
+            <br>
+        </td>
+    </tr>
+    <tr>
+        <td>To</td>
+    </tr>
+    <tr>
+          <td>
+            <select id= "to_index_weight" class="form-control">
+              <option> Kilograms
+              <option> Pounds
+            </select>
+            <br>
+          </td>
+    </tr>
+    <tr>
+      <td>Enter</td>
+    </tr>
+    <tr>
+      <td>
+        <input type="text"  class="form-control" id="user_input_weight" value="1">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <br>
+        <p>Result:</p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p id="result_weight"></p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <button type="button" class="btn btn-default" onclick="convert_weight()">Convert</button>
+      </td>
+    </tr>
+</table>
+</form>
+
 
 <!--Speed form-->
 <form id="form" class="speed_form">
@@ -216,6 +286,20 @@
       </table>
     </form>
 
+    <div id="details_of_speed">
+        <img src="http://i.imgur.com/5SE7W9n.png" alt="Statue of Liberty">
+        <p id="speed_text"></p>
+    </div>
+
+    <div id="details_of_length">
+        <img src="http://i.imgur.com/kiY5Gtk.png" alt="People in line" height="400">
+        <p id="length_text"></p>
+    </div>
+
+    <div id="details_of_weight">
+        <img src="http://i.imgur.com/p6UjJQq.png" alt="People in line">
+        <p id="weight_text"></p>
+    </div>
 
    </body>
 </head>
